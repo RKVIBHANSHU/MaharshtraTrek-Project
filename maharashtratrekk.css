@@ -1,0 +1,475 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    
+}
+body{
+    background-color: rgb(230, 220, 220);
+}
+.header{
+     min-height: 100vh;
+     width: 100%;
+     background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(TREKKING.jpg);
+     background-position: center;
+     background-size: cover;
+     position: relative;    
+}
+.header img{
+    width: 150px;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 100px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 15px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: whitesmoke;
+    display: block;
+    margin: auto;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+.nav-links ul li:hover:after{
+    width: 100%; 
+    transform-origin: left;
+    transform: scaleX(1);
+}
+.text{
+    width: 100%;
+    color: aliceblue;
+    position: absolute;
+    top: 45%;
+    transform: translate(-50% -50%);
+    text-align: center;
+}
+.text h1{
+    font-size: 60px;
+    
+}
+.text p{
+    margin: 10px auto;
+    font-size: 15px;
+    font-weight: 30%;
+}
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    color: aliceblue;
+    border: 2px solid white;
+    padding: 10px 30px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+}
+.btn:hover{
+    border: 1px solid aqua;
+    background-color: rgb(7, 98, 98);
+    transition: 1s;
+}
+nav .fa{
+    display: none;
+}
+#Form-popup0{
+    color: white;
+    cursor: pointer;
+}
+
+    
+
+/*-----**DESTINATION**-----*/
+.Destination{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    padding-top: 90px;
+    margin: 30px px;
+    
+}
+
+h1{
+    font-size: 40px;
+    font-weight: 600;
+}
+p{
+    color: grey;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    padding: 10px;
+    
+}
+p a{
+    color: rgb(125, 103, 103);
+    text-decoration:dashed;
+}
+
+.destination-container{
+    display: flex;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+    padding: 10px 20px;
+    margin-top: 4%;
+    
+}
+
+.destination-content{
+    background-color: white;
+    border-radius: 20px;
+    box-sizing: border-box; 
+    box-shadow:0px 14px 25px gray;  
+}
+.destination-content:hover{
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.17),0px 3px 6px rgba(0,0,0,0.23);
+    transform: translate(0px, -8px);
+}
+
+
+.destination-content img{
+    width: 100%;
+    height: 40vh;
+    object-fit:cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+.destination-content p{
+    text-align: left;
+}
+.location p{
+    text-align: center;
+}
+.Difficulty{
+    text-align: left;
+    padding-left: 10px;
+}
+.rating{
+    text-align: left;
+    margin-top: -10px;
+    padding-left: px; 
+}
+.star p{
+    color: black;
+}
+.Price{
+    padding-left: 10px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+}
+.Form-popup{
+    color:  black;
+    border: #169d9d;
+    background: #169d9d;
+    font-size: large;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    padding: 15px 60px;
+    cursor: pointer;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius:50px;
+    text-decoration: none;
+    padding-top: 15px;
+    
+}
+
+.Form-popup:hover{
+    background-color: rgb(15, 110, 110);
+}
+
+
+/*------booking form------*/
+
+
+.popup{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    display: none;
+
+}
+.popup-content{
+    height: 650px;
+    width: 700px;
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-radius: 30px;
+    position: relative;
+    padding-top: 20px;
+    text-align: left;
+    padding-left: 100px;
+    padding-right: 100px;
+    color: whitesmoke;
+    
+    
+    
+}
+.popup-content h1{
+    color: #e2d1d1;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    text-align: center;
+    
+}
+.popup-content img{
+    width: 100px;
+    
+}
+input{
+    width: 300px;
+   margin: 8px 0px;
+   padding-top: 10px;
+   padding-bottom: 5px;
+   background: transparent;
+   border: rgba(0, 0, 0,white);
+   color: whitesmoke;
+   padding-left: 10px;
+   margin-left: 10px;
+   
+}
+.input ::placeholder{
+    color: white;
+}
+.icon0{
+    margin-left: 3px ;
+}
+.icon2{
+    margin-left: -2px;
+}
+.icon3{
+    margin-left:-3px
+}
+.icon4{
+    margin-left: 4px;
+}
+.label{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.Datetime{
+    margin-top: -20px;
+    margin-left: 20px;
+}
+.message{
+    text-align: center;
+    width: 650px;
+
+}
+
+.message input{
+    margin-top: 20px;
+    width: 500px ;
+    padding-bottom: 150px;
+            
+}
+.confirm{
+    text-align: center;
+}
+.confirm button{
+    
+    background: rgb(17, 42, 78);
+    color: white;
+    border: rgb(1,1,1,white);;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 20px;
+
+}
+.confirm :hover{
+   background: white;
+   color: black;
+   border: rgb(3, 63, 75)
+}
+.confirm a{
+    text-decoration: none;
+    color: white;
+}
+ 
+
+
+
+        
+
+/*-----**SERVICES**-----*/
+
+.service{
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    padding-top: 140px;
+}
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+   
+
+}
+.service-col{
+    flex-basis: 42%;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-radius: 30px;
+    box-sizing: border-box; 
+    box-shadow: 0px 3px 6px rgba(0,0,0,0.17),0px 3px 6px rgba(0,0,0,0.23);
+    padding: 35px;  
+    margin-top: 15px; 
+}
+.service-col:hover{
+    box-shadow:0px 14px 25px gray;
+
+}
+.service-col img{
+   width: 70%;
+   margin-top: 40px;
+   display: flex;
+   padding-left: 35px; 
+}
+.like{
+
+    height:30%;
+    width: 40%;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 30px;
+}
+
+
+/*-----**ABOUT**-----*/
+
+
+.about{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 90px;
+    display: grid;
+       
+}
+
+.abt{
+    
+    background-color: white;
+    border-radius: 50px;
+
+}
+.abtimg img{
+    width:50%;
+    margin-top: 7%;
+    
+    
+}
+.abt p{
+    align-items: center;
+    width:70%;
+    padding-left: 15%;
+    margin-top: 3%;
+    margin-bottom: 7%;
+    color: #655e5e;
+}
+
+
+/*-----**FOOTER**-----*/
+
+
+.footer{
+    width:100%;
+    margin-top: 100px;
+    padding-top: 50px;
+    background: #333;
+    color: #efefef;
+    display: flex;
+    box-sizing: border-box;
+    gap: 15%;
+    padding-left: 5%;
+    padding-right: 5%;
+    border-top-right-radius: 70px ;
+    border-top-left-radius: 70px;  
+    padding-bottom: 20px;
+}
+
+.footer div{
+    text-align: center;
+}
+
+.col-1 {   
+    width: 30%;    
+}
+.col-1 p{
+    color: white;
+}
+.col-2{
+     width: 30%;
+    padding-top: 70px;
+}
+
+.col-2 input{
+    margin-top: 10px;
+    padding: 3% 2%;
+    
+}
+.col-2 button{
+    color: white;
+    background: #333;
+    padding: 5px;
+    margin-top: 7px;
+    border: 0;
+}
+.col-3{
+    width: 30%;
+    padding-top: 50px;
+}
+
+
+
+
+
+
+
+
+  
+
+
+
+    
+
+
+
+
+
+
+   
+
+
+
